@@ -194,7 +194,7 @@ void updateSunsetSunrise() {
 	adjustTimezone(&sunriseTime);
 	adjustTimezone(&sunsetTime);
 	
-	if (!pblTime.tm_isdst) 
+	if (pblTime.tm_isdst) 
 	{
 	  sunriseTime+=1;
 	  sunsetTime+=1;
